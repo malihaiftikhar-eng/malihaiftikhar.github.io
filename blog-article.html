@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" x-data="{ dark: localStorage.getItem('theme')==='dark'||(!localStorage.getItem('theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches), scrolled:false, mobileMenu:false, progress:0 }" :class="{'dark':dark}" x-init="$watch('dark',v=>localStorage.setItem('theme',v?'dark':'light'));window.addEventListener('scroll',()=>{scrolled=window.scrollY>20;progress=Math.min(100,Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100));},{passive:true})" class="scroll-smooth">
+<html lang="en" x-data="{ dark: localStorage.getItem('theme')==='light'||(!localStorage.getItem('theme')&&window.matchMedia('(prefers-color-scheme: light)').matches), scrolled:false, mobileMenu:false, progress:0 }" :class="{'dark':dark}" x-init="$watch('dark',v=>localStorage.setItem('theme',v?'dark':'light'));window.addEventListener('scroll',()=>{scrolled=window.scrollY>20;progress=Math.min(100,Math.round((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100));},{passive:true})" class="scroll-smooth">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -7,20 +7,20 @@
   <meta name="author" content="Eliott"/>
   <meta property="og:title" content="Why I ditched heavy CSS frameworks for Tailwind — Maliha"/>
   <meta property="og:type" content="article"/>
-  <title>Why I ditched heavy CSS frameworks for Tailwind — Eliott</title>
+  <title>Test title one</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet"/>
   <script>
-    tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{display:['PT Sans','sans-serif'],body:['DM Sans','sans-serif']},colors:{accent:'#FF6B2B','accent-light':'#FF8F5C'}}}}
+    tailwind.config={lightMode:'class',theme:{extend:{fontFamily:{display:['PT Sans','sans-serif'],body:['DM Sans','sans-serif']},colors:{accent:'#D6336C','accent-light':'#FF8F5C'}}}}
   </script>
   <style>
     *,*::before,*::after{box-sizing:border-box;}
     html{font-family:'DM Sans',sans-serif;}
     h1,h2,h3,h4,h5,h6{font-family:'PT Sans',sans-serif;}
-    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:#FF6B2B;border-radius:99px;}
+    ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:#D6336C;border-radius:99px;}
     body{transition:background-color .3s,color .3s;}
     body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4;}
     .nav-link{position:relative;}
@@ -53,7 +53,7 @@
     .dark .prose-article hr{border-top-color:#27272a;}
 
     /* Reading progress bar */
-    .progress-bar{position:fixed;top:0;left:0;height:3px;background:#FF6B2B;z-index:100;transition:width .1s;}
+    .progress-bar{position:fixed;top:0;left:0;height:3px;background:#D6336C;z-index:100;transition:width .1s;}
 
     .reveal{opacity:0;transform:translateY(20px);transition:opacity .5s cubic-bezier(.4,0,.2,1),transform .5s cubic-bezier(.4,0,.2,1);}
     .reveal.visible{opacity:1;transform:translateY(0);}
@@ -128,7 +128,7 @@
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Eliott" loading="lazy"/>
           </div>
           <div>
-            <p class="font-medium text-zinc-900 dark:text-white text-sm">Eliott</p>
+            <p class="font-medium text-zinc-900 dark:text-white text-sm">Maliha</p>
             <p class="text-xs text-zinc-500">UI/UX Designer &amp; Frontend Developer</p>
           </div>
           <div class="ml-auto flex gap-3">
